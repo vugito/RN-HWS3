@@ -10,6 +10,8 @@ const TaskLayout = ({children, footerButtonText, footerButtonNavigation}) => {
                 <View style={styles.squareFirst}></View>
                 <View style={styles.squareSecond}></View>
             </View>
+
+            <Header/>
             {children}
             <FooterButton buttonText={footerButtonText} buttonNavigation={footerButtonNavigation}/>
         </SafeAreaView>
