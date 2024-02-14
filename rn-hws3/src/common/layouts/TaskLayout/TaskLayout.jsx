@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './styles';
 import {SafeAreaView, View, Text} from "react-native";
 import FooterButton from "../../../components/sections/Footers/FooterButton/FooterButton";
+import Header from "../../../components/sections/Headers/Header/Header";
 
 const TaskLayout = ({children, footerButtonText, footerButtonNavigation}) => {
     return (
@@ -11,7 +12,7 @@ const TaskLayout = ({children, footerButtonText, footerButtonNavigation}) => {
                 <View style={styles.squareSecond}></View>
             </View>
 
-            <Header/>
+            <Header />
             {children}
             <FooterButton buttonText={footerButtonText} buttonNavigation={footerButtonNavigation}/>
         </SafeAreaView>
