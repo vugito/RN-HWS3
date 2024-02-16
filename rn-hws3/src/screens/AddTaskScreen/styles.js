@@ -68,7 +68,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'row'
     },
-    dateBoxContainer: {},
+    dateBoxContainer: {
+        flex: 1,
+        flexDirection: 'column'
+    },
     datePickerBox: {
         flex: 1,
         padding: 12,
@@ -78,7 +81,11 @@ const styles = StyleSheet.create({
         backgroundColor: '#f3ecff',
         // backgroundColor: 'red',
     },
-    timeBoxContainer: {},
+    timeBoxContainer: {
+        flex: 1,
+        flexDirection: 'column'
+        
+    },
     timePickerBox: {
         flex: 1,
         padding: 12,
