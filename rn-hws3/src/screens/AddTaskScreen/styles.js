@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     timeBoxContainer: {
         flex: 1,
         flexDirection: 'column'
-        
+
     },
     timePickerBox: {
         flex: 1,
