@@ -100,13 +100,13 @@ const AddTaskScreen = () => {
                     <View style={styles.dateBoxContainer}>
                         <Text style={styles.titleText}>Date</Text>
                         <Pressable onPress={showDatepicker} style={styles.datePickerBox}>
-                            <Text>{date ? date.toLocaleDateString() : 'Date'}</Text>
 
+                            <Text>{date ? date.toLocaleDateString() : 'Date'}</Text>
                         </Pressable>
                     </View>
                     <View style={styles.timeBoxContainer}>
                         <Text style={styles.titleText}>Time</Text>
-                        <Text>selected: {date.toLocaleString()}</Text>
+                        {/*<Text>selected: {date.toLocaleString()}</Text>*/}
                         {show && (
                             <DateTimePicker
                                 testID="dateTimePicker"
@@ -116,6 +116,9 @@ const AddTaskScreen = () => {
                                 onChange={onChange}
                             />
                         )}
+                        <Pressable onPress={showDatepicker} style={styles.timePickerBox}>
+                            <Text>{date ? date.toLocaleDateString() : 'Time'}</Text>
+                        </Pressable>
                     </View>
                 </View>
             </View>

@@ -76,6 +76,7 @@ const styles = StyleSheet.create({
         borderColor: '#E0E0E0',
         borderRadius: 6,
         backgroundColor: '#f3ecff',
+        // backgroundColor: 'red',
     },
     timeBoxContainer: {},
     timePickerBox: {
