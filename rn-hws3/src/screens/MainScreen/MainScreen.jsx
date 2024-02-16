@@ -5,7 +5,12 @@ import {View, Text} from "react-native";
 
 const MainScreen = () => {
     return (
-        <TaskLayout footerButtonText='Add Task' footerButtonNavigation='AddTask'>
+        <TaskLayout
+            headerFooterShown={true}
+            headerText='February 14, 2024'
+            headerIconType='back'
+            footerButtonText='Add Task'
+            footerButtonNavigation='AddTask'>
             <View style={styles.container}>
                 <Text>Hello</Text>
             </View>

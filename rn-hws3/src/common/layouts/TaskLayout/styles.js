@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#4A3780',
-        paddingVertical: 40,
+        paddingTop: 20,
     },
     squareContainer: {
         width: 200,
@@ -26,6 +26,9 @@ const styles = StyleSheet.create({
         borderColor: '#FFFFFF',
         // backgroundColor: '#8AE2E7',
         opacity: 0.1
+    },
+    topHelper: {
+        top: 75
     },
     squareSecond: {
         width: 145,
