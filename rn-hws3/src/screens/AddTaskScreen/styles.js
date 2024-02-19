@@ -66,7 +66,8 @@ const styles = StyleSheet.create({
         width: width,
         padding: 15,
         alignItems: 'center',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        gap: 10
     },
     dateBoxContainer: {
         flex: 1,

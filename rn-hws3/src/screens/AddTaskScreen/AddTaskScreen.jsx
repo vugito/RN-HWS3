@@ -17,6 +17,7 @@ const AddTaskScreen = () => {
     const [trophyLineCategoryActive, setTrophyLineCategoryActive] = useState(false);
 
     const [date, setDate] = useState(new Date(1598051730000));
+    const [time, setTime] = useState(new Date(1598051730000));
     const [mode, setMode] = useState('date');
     const [show, setShow] = useState(false);
 
@@ -24,6 +25,18 @@ const AddTaskScreen = () => {
         const currentDate = selectedDate;
         setShow(false);
         setDate(currentDate);
+    };
+
+    const handlerDatePick = (event, selectedDate) => {
+        const currentDate = selectedDate;
+        setShow(false);
+        setDate(currentDate);
+    };
+
+    const handlerTimePick  = (event, selectedTime) => {
+        const currentTime = selectedTime;
+        setShow(false);
+        setTime(currentTime);
     };
 
     const showMode = (currentMode) => {
@@ -60,11 +73,7 @@ const AddTaskScreen = () => {
         setTrophyLineCategoryActive(true);
     }
 
-
-
     const handleChangeTitleValue = (text) => setTitle(text);
-
-
 
     return (
         <TaskLayout
@@ -100,8 +109,9 @@ const AddTaskScreen = () => {
                     <View style={styles.dateBoxContainer}>
                         <Text style={styles.titleText}>Date</Text>
                         <Pressable onPress={showDatepicker} style={styles.datePickerBox}>
-
-                            <Text>{date ? date.toLocaleDateString() : 'Date'}</Text>
+                            <Text>{date.toLocaleDateString()}</Text>
+                            {/*<Text>{date ? date.toLocaleDateString() : 'Date'}</Text>*/}
+                            {/*<Text>{date.toLocaleDateString()}</Text>*/}
                         </Pressable>
                     </View>
                     <View style={styles.timeBoxContainer}>
@@ -116,8 +126,8 @@ const AddTaskScreen = () => {
                                 onChange={onChange}
                             />
                         )}
-                        <Pressable onPress={showDatepicker} style={styles.timePickerBox}>
-                            <Text>{date ? date.toLocaleDateString() : 'Time'}</Text>
+                        <Pressable onPress={showTimepicker} style={styles.timePickerBox}>
+                            <Text>{time ? time.toLocaleTimeString() : 'Time'}</Text>
                         </Pressable>
                     </View>
                 </View>
